@@ -1,0 +1,8 @@
+[Bb]in/
+[Oo]bj/
+.DS_Store
+[Tt]arget/
+*.swp
+__pycache__/
+[Bb]uild/
+[Dd]ist/

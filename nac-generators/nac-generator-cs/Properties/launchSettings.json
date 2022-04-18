@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Generate-NACException": {
+      "commandName": "Project",
+      "commandLineArgs": "-v"
+    }
+  }
+}
