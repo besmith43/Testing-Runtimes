@@ -6,3 +6,7 @@
 __pycache__/
 [Bb]uild/
 [Dd]ist/
+*.vim
+.idea/
+.vscode/
+
