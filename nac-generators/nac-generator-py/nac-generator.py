@@ -2,6 +2,7 @@
 
 import psutil
 import os
+import sys
 import csv
 from datetime import date
 
@@ -14,7 +15,9 @@ def start():
 
     hostname = os.uname().nodename
 
-    saveCSV(hostname, macAddress)
+    operating_system = sys.platform
+
+    saveCSV(hostname, macAddress, operating_system)
 
 def getMac():
     net = None
@@ -36,14 +39,14 @@ def getMac():
             return net[1].address
 
 
-def saveCSV(host, address):
+def saveCSV(host, address, op):
     f = open(os.getcwd() + '/' + str(date.today().month) + str(date.today().day) + str(date.today().year) + '-' + host + '.csv', 'w')
 
     writer = csv.writer(f)
 
-    writer.writerow(['hostname','mac address', 'vlan'])
+    writer.writerow(['hostname','mac address', 'operating system'])
 
-    writer.writerow([host, address, 'building'])
+    writer.writerow([host, address, op])
 
     f.close()
 
